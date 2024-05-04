@@ -1,6 +1,6 @@
 # Output of segmentation
-cloth_segmentation/output
-cloth_segmentation/checkpoint
+src/cloth_segmentation/output
+src/cloth_segmentation/checkpoint
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

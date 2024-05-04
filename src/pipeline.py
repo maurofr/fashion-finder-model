@@ -1,6 +1,7 @@
 from typing import Optional
 from cloth_segmentation.process import load_seg_model, generate_mask, get_masked_img
 from PIL import Image
+import requests
 
 class ClothSegmentation():
     def __init__(self, palette: Optional[list] = None, checkpoint_path: Optional[str] = "cloth_segmentation/checkpoint/cloth_segm.pth", device: Optional[str] = "cuda"):
@@ -30,5 +31,18 @@ class ClothSegmentation():
         mask = generate_mask(img, net=self.model, palette=self.palette,device=self.device)
         return get_masked_img(img, mask)
 
+def load_image(url: str) -> Image:
+    """
+    Load image from url address.
+
+    :param url: the string containing the url
+    :returns: PIL Image retrieved from the url
+    """
+    return Image.open(requests.get(url, stream=True).raw)
+
 if __name__ == "__main__":
     seg_model = ClothSegmentation()
+    url = "https://static.zara.net/photos///2023/I/0/3/p/9959/552/721/2/w/2048/9959552721_6_1_1.jpg?ts=1698929412065"
+    img = load_image(url)
+    masked_img = seg_model.mask_img(img=img)
+    masked_img.save(f"cloth_segmentation/output/{url[-8:]}_mask.jpg")
