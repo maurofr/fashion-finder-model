@@ -2,6 +2,9 @@
 src/cloth_segmentation/output
 src/cloth_segmentation/checkpoint
 
+# Dataset
+data
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

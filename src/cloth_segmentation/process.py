@@ -146,10 +146,11 @@ def generate_mask(input_image, net, palette, save: bool = False, device = 'cpu')
         cloth_seg.save(os.path.join(cloth_seg_out_dir, 'final_seg.png'))
     return cloth_seg
 
-def get_masked_img(img, mask):
+def get_masked_img(img: Image, mask: Image, background_img: Image = None):
     mask = mask.convert('L')
-    black_img = Image.new('L', img.size)
-    return Image.composite(img, black_img, mask)
+    if background_img is None:
+        background_img = Image.new('RGB', img.size)
+    return Image.composite(img, background_img, mask)
 
 def check_or_download_model(file_path):
     if not os.path.exists(file_path):
