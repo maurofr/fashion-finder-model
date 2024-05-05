@@ -24,32 +24,28 @@ This project has been developed by:
 
 * Victor Conchello
 &nbsp; <a href="https://www.linkedin.com/in/victor-conchello-vendrell/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
-  </a> &nbsp; 
+    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn &nbsp; 
 <a href="https://github.com/Victoriano012" rel="nofollow noreferrer">
     <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
   </a>
 
 * Marc Franquesa 
 &nbsp; <a href="https://www.linkedin.com/in/marc-franquesa-0015661b2/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
-  </a> &nbsp; 
+    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn &nbsp; 
 <a href="https://github.com/marcfranquesa" rel="nofollow noreferrer">
     <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
   </a>
 
 * Mauro Filomeno 
 &nbsp; <a href="https://www.linkedin.com/in/maurofilomeno/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
-  </a> &nbsp; 
+    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn &nbsp; 
 <a href="https://github.com/maurofr" rel="nofollow noreferrer">
     <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
   </a>
 
 * Albert Fugardo &nbsp; &nbsp;
 <a href="https://www.linkedin.com/in/albert-fugardo-cortada-575381205/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
-  </a> &nbsp; 
+    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn &nbsp; 
 <a href="https://github.com/AlbertFugardo" rel="nofollow noreferrer">
     <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
   </a>
