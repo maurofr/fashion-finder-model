@@ -1,0 +1,11 @@
+fashion_clip==0.2.2
+gdown==5.1.0
+numpy==1.26.4
+opencv_python==4.9.0.80
+pandas==2.2.2
+Pillow==10.3.0
+Requests==2.31.0
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121
+tqdm==4.66.4
+transformers==4.40.1

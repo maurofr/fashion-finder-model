@@ -1,4 +1,4 @@
-# inditex-similarity
+# Fashion Recommender
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)     [![Replexica](https://img.shields.io/badge/-REPLEXICA-black)](https://replexica.com/en)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
@@ -14,11 +14,11 @@ The aim of the challenge is, given a dataset of garment images from various angl
 | | | |
 
 ## Proposed Solution
-Our solution is a combination of deep learning models, that allow the retrieval of the closest images from our dataset, given a trio of images (such as the one above). Moreover, a LLM is included, which allows the users huge creativity, enabling them to find the most similar garment described in their own words. <br>
-A tool such as this one can be very powerful, both for the retailer (for fostering sells) and for the customer (for finding the desired piece of clothing with maximum flexibility).
+Our solution is a combination of deep learning models, that allow the retrieval of the closest images from our dataset, given a trio of images (such as the one above). Moreover, a CLIP model allows the users huge creativity, enabling them to find the most similar garment by searching for it with their own words. <br>
+A tool such as this one can be very powerful, both for the retailer (for fostering sells) and for the customer (for finding the desired piece of clothing with maximum flexibility). 
 
 ## Architecture
-
+The architecture and source code of our model can be found [here](src). We have tried to make our (final) code as easy to read as possible, so feel free to take a look at it.
 
 ## Contributors
 This project has been developed by:
