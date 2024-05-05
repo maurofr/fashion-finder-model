@@ -40,9 +40,9 @@ We provide a sketch of the pipeline to sum up what has been just said.
 
 With a dataset of embeddings, associated to the images, and the ability to efficiently search the space for similar clothing, we are all set up for inference.
 
-In our front-end, you have the ability to choose the features of the piece of clothing you want to find. This information, thanks to the choice of using a CLIP model, can be embedded into the same space as the images. The most similar result is returned to you, including all of its 3 images.
+In our front-end, you have the ability to choose the features of the piece of clothing you want to find. This information, thanks to the choice of using a CLIP model, can be embedded into the same space as the images. The most similar results are returned to you.
 
-Moreover, we use the top result to find the 5 that are most similar to it. With this, we aim to give alternatives that look similar to the original.
+Moreover, we can search from a specific image to find the 5 that are most similar to it. With this, we aim to give alternatives that look similar to the original.
 
 Here is a sketch of this:
 

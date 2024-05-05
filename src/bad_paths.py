@@ -1,7 +1,7 @@
 """
 File containing broken paths.
 
-Unluckily some requests were not too firendly with us and are not really images.
+Unluckily some requests were not too friendly with us and are not really images.
 While we agree that saving this info in a file is better for production, it was
 just so much more convenient for fast coding!
 """
