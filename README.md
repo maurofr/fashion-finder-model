@@ -6,7 +6,16 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 
+<p align="center">
+    <img src="images/gif1.gif" width="600" height="300" />
+</p>
+
 Inditex-similarity is a project developed at [HackUPC](https://hackupc.com/) 2024. It tries to solve the challenge proposed by [InditexTech](https://www.zaratalent.com/es/tech/). <br>
+
+<p align="center">
+    <img src="images/gif2.gif" width="600" height="300" />
+</p>
+
 The aim of the challenge is, given a dataset of garment images from various angles, developing an algorithm that identifies duplicated or very similar images not belonging to the same set. <br> Each set consists of three consecutive photos. An example is:
 | | | |
 | --- | --- | --- |
