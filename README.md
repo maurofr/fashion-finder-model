@@ -1,6 +1,9 @@
 # inditex-similarity
 
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)     [![Static Badge](https://img.shields.io/badge/-Replexica-black)](https://replexica.com/en)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)     [![Replexica](https://img.shields.io/badge/-REPLEXICA-black)](https://replexica.com/en)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 
 Inditex-similarity is a project developed at [HackUPC](https://hackupc.com/) 2024. It tries to solve the challenge proposed by [InditexTech](https://www.zaratalent.com/es/tech/). <br>
