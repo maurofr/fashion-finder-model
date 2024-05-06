@@ -1,47 +1,49 @@
-# Fashion Recommender
+<h1 align="center">Fashion Finder</h1>
 
-[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)     [![Replexica](https://img.shields.io/badge/-REPLEXICA-black)](https://replexica.com/en)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+<h4 align="center">
+    <a href="https://fashion-finder-eta.vercel.app">Website</a> | 
+    <a href="https://github.com/marcfranquesa/fashion-finder-website">Website Repository</a>
+</h4>
 
+<div align="center">
+    <img src="images/fashion-finder.png" alt="Fashion Finder" width="80%" height="80%">
+</div>
 
-<p align="center">
-    <img src="images/gif1.gif" width="600" height="300" />
-</p>
+## Description
 
-Inditex-similarity is a project developed at [HackUPC](https://hackupc.com/) 2024. It tries to solve the challenge proposed by [InditexTech](https://www.zaratalent.com/es/tech/). <br>
+Fashion Finder is a full-stack application for visualizing and recommending products from Inditex's dataset. You can query the latest fashion clothing from its features (such as color and pattern) as well as find similar products based on a selected item. Queries are done with a vector search on embeddings calculated by a [CLIP model](https://github.com/maurofr/fashion-finder-model) and stored in MongoDB Atlas. It was built during [HackUPC 2024](https://hackupc.com) and submitted to the InditexTECH challenge.
 
-<p align="center">
-    <img src="images/gif2.gif" width="600" height="300" />
-</p>
+## How it works
 
-The aim of the challenge is, given a dataset of garment images from various angles, developing an algorithm that identifies duplicated or very similar images not belonging to the same set. <br> Each set consists of three consecutive photos. An example is:
-| | | |
-| --- | --- | --- |
-| ![Image 1](images/img1.jpg) | ![Image 2](images/img2.jpg) | ![Image 3](images/img3.jpg) |
-| | | |
+We first preprocessed the entire dataset (around 50k products with 3 images per item) and extracted an embedding for each product. Then, we saved these in MongoDB and created an application to perform the queries. Thanks to the CLIP model, we can create embeddings for images and text.
 
-## Proposed Solution
-Our solution is a combination of deep learning models, that allow the retrieval of the closest images from our dataset, given a trio of images (such as the one above). Moreover, a CLIP model allows the users huge creativity, enabling them to find the most similar garment by searching for it with their own words. <br>
-A tool such as this one can be very powerful, both for the retailer (for fostering sells) and for the customer (for finding the desired piece of clothing with maximum flexibility). 
+### Model
 
-## Architecture
-The architecture and source code of our model can be found [here](src). We have tried to make our (final) code as easy to read as possible, so feel free to take a look at it.
+The extraction of the embeddings is a two-step process:
 
-## Contributors
-This project has been developed by:
+1. Image segmentation to identify the regions of interest of each image (the Inditex product). Then, replace everything else with the color green (the color was chosen based on perceptual results). [Model](https://github.com/levindabhi/cloth-segmentation).
 
-* Victor Conchello &nbsp;[![vector](https://i.stack.imgur.com/gVE0j.png) Linkedin](https://www.linkedin.com/in/victor-conchello-vendrell/) [![vector](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/Victoriano012)
+2. Given the masked image, we feed it to a fashion fine-tuned CLIP model to get its embedding (the mask helps the model focus on the product). After attempting to train a Siamese network and a VAE, we ended up using a [pre-trained model](https://github.com/patrickjohncyh/fashion-clip) as it gave the best results. Our entire embedding extraction process can be found [here](https://github.com/maurofr/fashion-finder-model/tree/main/src).
 
-* Marc Franquesa &nbsp; [![vector](https://i.stack.imgur.com/gVE0j.png) Linkedin](https://www.linkedin.com/in/marc-franquesa-0015661b2/) [![vector](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/marcfranquesa)
+<div align="center">
+    <img src="images/preprocessing.png" alt="Preprocessing" width="80%" height="80%">
+</div>
 
+### Website
 
-* Mauro Filomeno &nbsp; [![vector](https://i.stack.imgur.com/gVE0j.png) Linkedin](https://www.linkedin.com/in/maurofilomeno/) [![vector](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/maurofr)
+To perform the queries on the dataset, we built an application using [Next.js](https://nextjs.org). Each product is saved in our database with an identifying index, three links (to each of the product's images), and a 512-dimensional embedding. We have two separate types of searches:
 
-* Albert Fugardo &nbsp; [![vector](https://i.stack.imgur.com/gVE0j.png) Linkedin](https://www.linkedin.com/in/albert-fugardo-cortada-575381205/) [![vector](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/AlbertFugardo)
+- [Based on a product index](https://fashion-finder-eta.vercel.app): it returns the three images of the selected product, as well as the 5 closest pieces of clothing.
 
+- [Based on features](https://fashion-finder-eta.vercel.app/recommender): select from five different dropdowns to find the closest products to the query.
 
+<div align="center">
+    <img src="images/inference.png" alt="Inference" height="300">
+</div>
 
+## Contact
 
-
+- [Victor Conchello](https://github.com/Victoriano012)
+- [Mauro Filomeno](https://github.com/maurofr)
+- [Marc Franquesa](https://github.com/marcfranquesa)
+- [Albert Fugardo](https://github.com/AlbertFugardo)
