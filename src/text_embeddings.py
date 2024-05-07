@@ -10,8 +10,8 @@ import pandas as pd
 options = {
     'color' : ['white', 'black', 'brown', 'blue', 'green', 'red', 'orange', 'pink', 'gray', 'yellow', 'multicolor'],
     'person' : ['woman', 'man', 'kid'],
-    'season' : ['winter', 'spring', 'summer', 'autum'],
-    'type' : ['dress', 'trouser', 'short', 'shirt', 'jacket', 'jumper', 'skirt'],
+    'season' : ['winter', 'spring', 'summer', 'autumn'],
+    'type' : ['dress', 'trouser', 'shorts', 'shirt', 'jacket', 'jumper', 'skirt'],
     'pattern' : ['spotted', 'striped', 'plain', 'checkered'],
 }
 all_combinations = [' '.join(tup) for tup in itertools.product(*options.values())]
